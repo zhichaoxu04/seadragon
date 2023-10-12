@@ -10,3 +10,8 @@
   ```
 
 ### Using R-studio
+```bash
+module load rstudio-sing/4.2.0
+bsub < /rsrch3/home/department/user/rserver_4.2.0.lsf
+bpeek [jobID]
+```
