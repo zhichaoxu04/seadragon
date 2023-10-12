@@ -1,18 +1,30 @@
 # seadragon
 
 
-### Accessing the cluster
+### Access the cluster
 - VPN or VX Remote (Desktop or web-based)
 - Windows (X-Win32)
 - Macintosh (Native Terminal)
   ```bash
-  ssh seadragon [-X or -Y]
+  ssh seadragon -Y user@mdanderson.org
   ```
 
-### Using R-studio
-First, submit a job to initial the rstudio:
+### Use R-studio in the web
+RStudio has been installed as a container on Seadragon. This particular container requires some special work, so a submission script is provided to submit the job. First, submit a job to initial the rstudio:
 ```bash
 module load rstudio-sing/4.2.0
+# Modify the job submission .lsf script 
 bsub < /rsrch3/home/department/user/rserver_4.2.0.lsf
-bpeek [jobID]
+# Use bpeek <jobid> to retrieve information
+bpeek [jobID] 
 ```
+Login with PuTTY, but first make sure that X11 forwarding has been enabled:
+```bash
+# Host Name in the main PuTTY Configuration window
+user@mdanderson.org
+# Source port
+8787
+# Destination
+edragon023.cm.cluster:12345
+```
+
