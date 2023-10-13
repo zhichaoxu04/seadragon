@@ -4,6 +4,9 @@
 ### Access the cluster
 - VPN or VX Remote (Desktop or web-based)
 - Windows (X-Win32)
+- - Connection Name: seadragon
+  - Host: seadragon
+  - Login: user
 - Macintosh (Native Terminal)
   ```bash
   ssh seadragon -Y user@mdanderson.org
